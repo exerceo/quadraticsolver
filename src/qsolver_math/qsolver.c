@@ -9,7 +9,7 @@
 int qsolver(double a, double b, double c, double *x1, double *x2) {
 	double disc, sqrt_disc;
 
-	disc = b*b-4*a*c;
+	disc = b*b-4.0*a*c;
 
 	if (disc < 0.0) {
 		// logging
@@ -21,8 +21,8 @@ int qsolver(double a, double b, double c, double *x1, double *x2) {
 
 	sqrt_disc = sqrt(disc);
 
-	*x1 = (-b+sqrt_disc)/(2*a);
-	*x2 = (-b-sqrt_disc)/(2*a);
+	*x1 = ((-b)+sqrt_disc)/(2*a);
+	*x2 = ((-b)-sqrt_disc)/(2*a);
 
-	return 1;
+	return 0;
 }
