@@ -15,7 +15,6 @@ int qsolver(double a, double b, double c, double *x1, double *x2) {
 		// logging
 		return 3;
 	} else if (disc == 0.0) {
-		if (toggle_log == 1)
 		// logging
 		return 2;
 	}
