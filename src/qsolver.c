@@ -6,8 +6,6 @@
 #include <math.h>
 #include "qsolver.h"
 
-extern int toggle_log;
-
 int qsolver(double a, double b, double c, double *x1, double *x2) {
 	double disc, sqrt_disc;
 
