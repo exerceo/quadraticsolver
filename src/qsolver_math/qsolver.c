@@ -13,10 +13,10 @@ int qsolver(double a, double b, double c, double *x1, double *x2) {
 
 	if (disc < 0.0) {
 		// logging
-		return 3;
+		return 2;
 	} else if (disc == 0.0) {
 		// logging
-		return 2;
+		return 1;
 	}
 
 	sqrt_disc = sqrt(disc);
