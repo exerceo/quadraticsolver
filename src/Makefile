@@ -18,6 +18,4 @@ build_cunit: build_qsolver cunit/cunit.c
 	$(CC) cunit/cunit.c -c $(C_FLAGS)
 
 clean:
-	rm *.o
-	rm qsolver
-	rm t1
+	rm -rf *.o qsolver t1
