@@ -17,7 +17,7 @@ cd src
 make deploy
 ```
 
-now the `qsolver` program will be in the deployment direcetory
+now the `qsolver` program will be in the deployment directory
 
 ## Usage
 To use qsolver, run the program (i.e. `./qsolver`) and enter three decimal numbers separated by spaces. 
