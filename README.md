@@ -10,6 +10,15 @@ make
 
 now `qsolver` should be in the directory
 
+## Deployment
+To deploy the project for use:
+```
+cd src
+make deploy
+```
+
+now the 'qsolver' program will be in the deployment direcetory
+
 ## Usage
 To use qsolver, run the program (i.e. `./qsolver`) and enter three decimal numbers separated by spaces. 
 
