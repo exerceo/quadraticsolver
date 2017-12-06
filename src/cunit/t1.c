@@ -4,6 +4,7 @@
 
 int main() {
 	double a, b, c, x1, x2;
+	double _x1, _x2;
 	int ret;
 	cunit_init();
 
@@ -11,19 +12,45 @@ int main() {
 	a = 2.0;
 	b = 5.0;
 	c = -3.0;
+	_x1 = 0.5;
+	_x2 = -3.0;
 	ret = qsolver(a, b, c, &x1, &x2);
 	assert_eq("ret", ret, 0);
-	assert_feqrerr("x1", x1, x2, 10.0*cunit_dmacheps );
-	assert_feqrerr("x2", x2, x1, 10.0*cunit_dmacheps );
+	assert_feqrerr("x1", x1, _x1, 10.0*cunit_dmacheps );
+	assert_feqrerr("x2", x2, _x2, 10.0*cunit_dmacheps );
+
+	// good unit test; should return 0
+	a = 2.0;
+	b = 6.0;
+	c = 3.0;
+	_x1 = -0.6339745962155614;
+	_x2 = -2.3660254037844384;
+	ret = qsolver(a, b, c, &x1, &x2);
+	assert_eq("ret", ret, 0);
+	assert_feqrerr("x1", x1, _x1, 10.0*cunit_dmacheps );
+	assert_feqrerr("x2", x2, _x2, 10.0*cunit_dmacheps );
+
+	// good unit test; should return 0
+	a = 9.0;
+	b = 42.0;
+	c = 5.0;
+	_x1 = -0.1222501397630668;
+	_x2 = -4.5444165269035999;
+	ret = qsolver(a, b, c, &x1, &x2);
+	assert_eq("ret", ret, 0);
+	assert_feqrerr("x1", x1, _x1, 10.0*cunit_dmacheps );
+	assert_feqrerr("x2", x2, _x2, 10.0*cunit_dmacheps );
 
 	// good unit test; should return 1
 	a = 1.0;
 	b = 2.0;
 	c = 1.0;
+	_x1 = -1.0;
+	_x2 = -1.0;
 	ret = qsolver(a, b, c, &x1, &x2);
 	assert_eq("ret", ret, 1);
-	assert_feqrerr("x1", x1, x2, 10.0*cunit_dmacheps );
-	assert_feqrerr("x2", x2, x1, 10.0*cunit_dmacheps );
+	assert_feqrerr("x1", x1, _x1, 10.0*cunit_dmacheps );
+	assert_feqrerr("x2", x2, _x2, 10.0*cunit_dmacheps );
 
 	// good unit test; should return -2
 	a = 1.0;
@@ -31,8 +58,6 @@ int main() {
 	c = 3.0;
 	ret = qsolver(a, b, c, &x1, &x2);
 	assert_eq("ret", ret, -2);
-	assert_feqrerr("x1", x1, x2, 10.0*cunit_dmacheps );
-	assert_feqrerr("x2", x2, x1, 10.0*cunit_dmacheps );
 
 	// good unit test; should return -1
 	a = 0.0;
@@ -40,7 +65,5 @@ int main() {
 	c = 3.0;
 	ret = qsolver(a, b, c, &x1, &x2);
 	assert_eq("ret", ret, -1);
-	assert_feqrerr("x1", x1, x2, 10.0*cunit_dmacheps );
-	assert_feqrerr("x2", x2, x1, 10.0*cunit_dmacheps );
 	exit(0);
 }
