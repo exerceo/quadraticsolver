@@ -5,6 +5,9 @@ LIBS = -lm
 qsolver: build_input build_qsolver
 	$(CC) qsolver_main.c input.o qsolver.o $(C_FLAGS) $(LIBS) -o qsolver
 
+deploy: qsolver
+	cp qsolver ../deployment
+
 t1: build_qsolver build_cunit
 	$(CC) cunit/t1.c cunit.o qsolver.o $(C_FLAGS) $(LIBS) -o t1
 
