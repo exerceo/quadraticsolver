@@ -7,6 +7,11 @@
 #include "qsolver.h"
 
 int qsolver(double a, double b, double c, double *x1, double *x2) {
+	#ifdef DEBUG 
+		fprintf(stderr, "DEBUG: Entering qsolver\n");
+		fprintf(stderr, "DEBUG: a = %f | b = %f | c = %f\n", a, b, c);
+	#endif
+
 	double disc, sqrt_disc;
 
 	if (a == 0.0) { /* not a quadratic */
