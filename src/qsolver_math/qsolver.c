@@ -4,6 +4,7 @@
  */
 
 #include <math.h>
+#include <stdio.h>
 #include "qsolver.h"
 
 int qsolver(double a, double b, double c, double *x1, double *x2) {

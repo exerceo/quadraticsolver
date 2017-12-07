@@ -18,7 +18,7 @@ int read_line(char* input, int length){
 int input_numbers(char* input, double returns[]){
 	#ifdef DEBUG 
 		fprintf(stderr, "DEBUG: Entering input_numbers\n");
-		fprintf(stderr, "DEBUG: input = %s | &returns = %d\n", input, &returns);
+		fprintf(stderr, "DEBUG: input = %s | &returns = %f\n", input, *returns);
 	#endif
 
 	double a, b, c;
