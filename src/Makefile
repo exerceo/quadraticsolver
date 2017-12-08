@@ -11,6 +11,9 @@ deploy: qsolver
 t1: build_qsolver build_cunit
 	$(CC) cunit/t1.c cunit.o qsolver.o $(C_FLAGS) $(LIBS) -o t1
 
+t2: build_input build_cunit
+	$(CC) cunit/t2.c cunit.o input.o $(C_FLAGS) $(LIBS) -o t2
+
 build_input: input/input.c
 	$(CC) input/input.c -c $(C_FLAGS) 
 
@@ -21,4 +24,4 @@ build_cunit: build_qsolver cunit/cunit.c
 	$(CC) cunit/cunit.c -c $(C_FLAGS)
 
 clean:
-	rm -rf *.o qsolver t1
+	rm -rf *.o qsolver t1 t2
