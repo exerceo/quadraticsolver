@@ -28,11 +28,9 @@ int main(int argc, char* argv[]){
 			exit(1);
 
 		ret = input_numbers(input, inputs);
+
 		if (ret == -1) {
-			printf("ERROR: input contains a INF\n\n");
-			continue;
-		} else if (ret == -2) {
-			printf("ERROR: input contains a NAN\n\n");
+			fprintf(stderr, "Error: a, b and c must be real numbers. Example: 2.0 5 -3.0\n\n");
 			continue;
 		}
 

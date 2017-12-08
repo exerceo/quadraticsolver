@@ -27,7 +27,9 @@ int input_numbers(char* input, double returns[]){
 	#endif
 
 	double a, b, c;
-	sscanf(input, "%lf %lf %lf", &a, &b, &c);
+
+	if (sscanf(input, "%lf %lf %lf", &a, &b, &c) != 3)
+		return -1;
 
 	returns[0] = a;
 	returns[1] = b;
