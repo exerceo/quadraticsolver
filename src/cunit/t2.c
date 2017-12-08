@@ -1,3 +1,10 @@
+/*  Date: 12/08/2017
+ *  Class: CS4900
+ *  Function: Unit Tests (t2.c)
+ *     - Tests the input_numbers function
+ *     - Should return 0 for successful unit tests.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "cunit.h"

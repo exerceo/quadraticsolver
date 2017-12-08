@@ -1,3 +1,10 @@
+/*  Date: 12/08/2017
+ *  Class: CS4900
+ *  Function: Unit Tests (t1.c)
+ *     - Tests the qsolver function
+ *     - Should return 0 for successful unit tests.
+ */
+
 #include <stdlib.h>
 #include "cunit.h"
 #include "../qsolver_math/qsolver.h"
