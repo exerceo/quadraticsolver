@@ -1,6 +1,6 @@
-/*  Date: 10/29/2017
+/*  Date: 12/07/2017
  *  Class: CS4900
- *  File: Quadratic Solver Function
+ *  Function: Quadratic Solver Function (qsolver.c)
  */
 
 #include <math.h>

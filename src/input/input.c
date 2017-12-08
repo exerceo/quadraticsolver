@@ -1,3 +1,8 @@
+/*  Date: 12/07/2017
+ *  Class: CS4900
+ *  Function: Quadratic Solver Input (input.c)
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -23,6 +28,7 @@ int input_numbers(char* input, double returns[]){
 
 	double a, b, c;
 	sscanf(input, "%lf %lf %lf", &a, &b, &c);
+
 	returns[0] = a;
 	returns[1] = b;
 	returns[2] = c;

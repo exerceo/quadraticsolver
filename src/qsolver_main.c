@@ -1,3 +1,8 @@
+/*  Date: 12/07/2017
+ *  Class: CS4900
+ *  Function: Quadratic Solver Main Program (qsolver_main.c)
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -22,7 +27,15 @@ int main(int argc, char* argv[]){
 		if (strcmp(input, "exit\n") == 0)
 			exit(1);
 
-		input_numbers(input, inputs);
+		ret = input_numbers(input, inputs);
+		if (ret == -1) {
+			printf("ERROR: input contains a INF\n\n");
+			continue;
+		} else if (ret == -2) {
+			printf("ERROR: input contains a NAN\n\n");
+			continue;
+		}
+
 		ret = qsolver(inputs[0], inputs[1], inputs[2], &x1, &x2);
 
 		switch(ret) {
