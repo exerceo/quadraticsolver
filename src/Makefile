@@ -20,7 +20,7 @@ build_input: input/input.c
 build_qsolver: qsolver_math/qsolver.c
 	$(CC) qsolver_math/qsolver.c -c $(C_FLAGS)
 
-build_cunit: build_qsolver cunit/cunit.c
+build_cunit: cunit/cunit.c
 	$(CC) cunit/cunit.c -c $(C_FLAGS)
 
 clean:
