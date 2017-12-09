@@ -59,12 +59,34 @@ int main() {
 	assert_feqrerr("x1", x1, _x1, 10.0*cunit_dmacheps );
 	assert_feqrerr("x2", x2, _x2, 10.0*cunit_dmacheps );
 
+	// good unit test; should return 0
+	a = 12.3232;
+	b = 35.0;
+	c = 9.65;
+	_x1 = -0.3094248309900807;
+	_x2 = -2.5307465530660087;
+	ret = qsolver(a, b, c, &x1, &x2);
+	assert_eq("ret", ret, 0);
+	assert_feqrerr("x1", x1, _x1, 10.0*cunit_dmacheps );
+	assert_feqrerr("x2", x2, _x2, 10.0*cunit_dmacheps );
+
 	// good unit test; should return 1
 	a = 1.0;
 	b = 2.0;
 	c = 1.0;
 	_x1 = -1.0;
 	_x2 = -1.0;
+	ret = qsolver(a, b, c, &x1, &x2);
+	assert_eq("ret", ret, 1);
+	assert_feqrerr("x1", x1, _x1, 10.0*cunit_dmacheps );
+	assert_feqrerr("x2", x2, _x2, 10.0*cunit_dmacheps );
+
+	// good unit test; should return 1
+	a = 2.0;
+	b = 8.0;
+	c = 8.0;
+	_x1 = -2.0;
+	_x2 = -2.0;
 	ret = qsolver(a, b, c, &x1, &x2);
 	assert_eq("ret", ret, 1);
 	assert_feqrerr("x1", x1, _x1, 10.0*cunit_dmacheps );
