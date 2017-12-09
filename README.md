@@ -1,5 +1,5 @@
 # quadraticsolver
-Quadratic equation solver written in C
+Quadratic equation solver written in C by Alex Ewert and Samuel Lewis.
 
 ## Building
 To build the project:
