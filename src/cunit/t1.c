@@ -110,11 +110,33 @@ int main() {
 	ret = qsolver(a, b, c, &x1, &x2);
 	assert_eq("ret", ret, -2);
 
+	// good unit test; should return -2
+	a = 1.0;
+	b = 1.0;
+	c = 1.0;
+	ret = qsolver(a, b, c, &x1, &x2);
+	assert_eq("ret", ret, -2);
+
+	// good unit test; should return -2
+	a = 234.45;
+	b = 2525.0;
+	c = 9999.0;
+	ret = qsolver(a, b, c, &x1, &x2);
+	assert_eq("ret", ret, -2);
+
 	// good unit test; should return -1
 	a = 0.0;
 	b = 2.0;
 	c = 3.0;
 	ret = qsolver(a, b, c, &x1, &x2);
 	assert_eq("ret", ret, -1);
+
+	// good unit test; should return -1
+	a = 0.0;
+	b = 1414.0;
+	c = -3.45543;
+	ret = qsolver(a, b, c, &x1, &x2);
+	assert_eq("ret", ret, -1);
+
 	exit(0);
 }
