@@ -1,0 +1,24 @@
+Quadratic equation
+
+The quadratic equation follows the form ax^2 + bx + c = 0.
+
+To solve for x, one can use the formula:
+
+x = (-b +- sqrt(b^2 - 4ac))/(2a)
+
+A few notes about the equation:
+	- a = 0 is not valid as it will cause divison by 0
+	- The discriminant (b^2 - 4ac) must not be negative or it will not be a real number
+	- There will be two solutions (x1 and x2) as there is a square root in the equation
+
+Example valid inputs:
+	- a = 2; b = 9; c = 5
+	- a = 3; b = 5; c = 2
+
+Example invalid inputs:
+	- a = 0; b = 9; c = 5
+		- a = 0
+	- a = 1; b = 1; c = 1
+		- Discriminant would be negative
+
+Any other information can be obtained from wikipedia: https://en.wikipedia.org/wiki/Quadratic_equation

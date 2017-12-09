@@ -1,0 +1,22 @@
+Compiler
+
+For the project, we use the gcc compiler suite.
+
+The gcc compiler is a command line tool and is a very common compiler 
+and is usuable on every popular platform (Windows, MacOS, Linux). 
+
+Some of the main command line flags are (case-sensitive, and prepended with "-"):
+    - Wall - turns on all warnings 
+    - Werror - turns all warnings into errors, which will not allow compilation
+    - pedantic - makes code more portable by warning about things that aren't in every standard.
+    - std=VERSION - sets the standard for the compiler to reference the code against
+    - o FILENAME - outputs the final executable to the file: FILENAME
+    - c - only compiles into object files
+        - This is very useful for large projects, when you compile this way
+          only modified files will be recompiled (in conjunction with make)
+    - lLIBRARY_NAME - this will link a library to the executable 
+                    - for this project we will need the math library at least
+
+Any other options should be out of the scope of this project.
+More options can be found here: https://gcc.gnu.org/onlinedocs/gcc/Option-Summary.html
+But it would probably be more useful to google any options you may need.
