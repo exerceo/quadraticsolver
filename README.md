@@ -42,7 +42,7 @@ make t1 t2
 ./t1
 ./t2
 ```
-If anything the program returns 0, it was successful. If any error occurs, the program will display the error and line number.
+If the program returns 0, it was successful. If any error occurs, the program will display the error and line number.
 
 ## System Testing
 The system test builds the program and then runs preset tests and checks the output.
