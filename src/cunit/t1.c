@@ -70,6 +70,17 @@ int main() {
 	assert_feqrerr("x1", x1, _x1, 10.0*cunit_dmacheps );
 	assert_feqrerr("x2", x2, _x2, 10.0*cunit_dmacheps );
 
+	// good unit test; should return 0
+	a = -2.45;
+	b = 25.0;
+	c = 9.0;
+	_x1 = -0.3481233903022014;
+	_x2 = 10.5522050229552633;
+	ret = qsolver(a, b, c, &x1, &x2);
+	assert_eq("ret", ret, 0);
+	assert_feqrerr("x1", x1, _x1, 10.0*cunit_dmacheps );
+	assert_feqrerr("x2", x2, _x2, 10.0*cunit_dmacheps );
+
 	// good unit test; should return 1
 	a = 1.0;
 	b = 2.0;
